@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/assets/js/jquery.js"></script>
+    <div data-include="../../includes/head"></div>
+
+    <title>About Us</title>
+  </head>
+  <body>
+    <div data-include="../../includes/navbar"></div>
+
+    About Us
+    <button class="primary-btn">Click</button>
+  </body>
+  <script>
+    $(function () {
+      var includes = $("[data-include]");
+      $.each(includes, function () {
+        var file = $(this).data("include");
+
+        // Adjust path for files outside the current directory
+        var filePath = file.startsWith("../")
+          ? `${file}.html`
+          : `./${file}.html`;
+
+        $(this).load(filePath);
+      });
+    });
+  </script>
+</html>

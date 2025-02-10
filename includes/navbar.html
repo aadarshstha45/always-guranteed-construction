@@ -1,0 +1,166 @@
+<script>
+  const navItems = [
+    {
+      name: "Home",
+      link: "/pages/home/index.html",
+    },
+    {
+      name: "About Us",
+      link: "/pages/about/index.html",
+    },
+    {
+      name: "Services",
+      link: "/services",
+    },
+    {
+      name: "Our Work",
+      link: "/our-Work",
+    },
+    {
+      name: "Reviews",
+      link: "/reviews",
+    },
+    {
+      name: "Contact Us",
+      link: "/contact-us",
+    },
+  ];
+
+  const pathname = window.location.pathname;
+
+  console.log({ pathname });
+
+  navItems.forEach((item) => {
+    const navLinksDrawer = document.querySelector("#drawer .nav-links");
+    const navLinksDesktop = document.querySelector("#nav-menu .nav-links");
+    console.log({ navLinksDrawer });
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = item.link;
+    a.textContent = item.name;
+    a.classList.add(
+      "hover:text-[#005CDC]",
+      "min-[700px]:border-b-[3px]",
+      "min-[700px]:hover:border-b-[#005CDC]",
+      "min-[700px]:pb-3",
+      "min-[700px]:pt-1",
+      "text-[20px]",
+      "min-[700px]:text-[15px]",
+      "min-[700px]:text-white"
+    );
+    // Check if the current link is the active one
+    if (
+      pathname === item.link ||
+      (pathname.includes(item.link) && item.link !== "/")
+    ) {
+      a.classList.add(
+        "min-[700px]:border-b-[#005CDC]",
+        "text-primary-500",
+        "font-medium"
+      ); // Active link border color
+    } else {
+      a.classList.add("border-b-transparent", "text-black"); // Non-active link border color
+    }
+    li.appendChild(a);
+
+    // Append to both the mobile and desktop nav lists
+    if (navLinksDrawer) navLinksDrawer.appendChild(li.cloneNode(true));
+    if (navLinksDesktop) navLinksDesktop.appendChild(li);
+  });
+</script>
+
+<nav class="flex flex-col w-full bg-red-100">
+  <div class="flex w-full h-[40px]">
+    <div
+      class="bg-gradient-to-r from-[#005CDC] to-[#064091] text-white shadow-md w-[486px] min-w-[300px] lg:min-w-[380px] 2xl:min-w-[486px] flex items-center justify-center px-2 whitespace-nowrap"
+    >
+      Always Guaranteed Construction
+    </div>
+    <div
+      class="bg-[#000] text-white w-[75%] flex items-center justify-end sm:pr-[50px] lg:pr-[150px]"
+    >
+      <p
+        class="bg-gradient-to-r from-[#005CDC] to-[#064091] bg-clip-text text-transparent text-[15px] font-medium"
+      >
+        Email:
+        <span class="text-white">
+          <a href="mailto:brenda3712000@yahoo.com"> brenda3712000@yahoo.com </a>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="w-full bg-white">
+    <div
+      class="flex items-center justify-between mx-auto max-w-[1800px] px-[10px] md:px-[20px]"
+    >
+      <img
+        src="/assets/images/logo.png"
+        alt="logo"
+        class="w-[250px] h-[100px] md:w-[314px] md:h-[134px]"
+      />
+
+      <!-- Button to Open Drawer -->
+      <button
+        onclick="openDrawer()"
+        class="px-6 py-3 bg-blue-500 text-white rounded-full m-4 flex min-[700px]:hidden"
+      >
+        Open Drawer
+      </button>
+
+      <!-- Drawer Component -->
+      <div
+        id="drawer"
+        class="fixed inset-0 bg-gray-500 bg-opacity-50 hidden transition-opacity duration-300 ease-in-out"
+        onclick="closeDrawer()"
+      >
+        <div
+          class="relative w-full max-w-[400px] ml-auto h-full bg-white flex flex-col p-6 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out right-0"
+          onclick="event.stopPropagation()"
+          id="drawer-content"
+        >
+          <div class="flex justify-end">
+            <button
+              onclick="closeDrawer()"
+              class="hover:bg-gray-200 px-2 text-xl font-semibold"
+            >
+              &times;
+            </button>
+          </div>
+          <ul class="flex flex-col gap-6 nav-links" id=""></ul>
+        </div>
+      </div>
+
+      <!-- Drawer Component -->
+
+      <div class="hidden min-[700px]:flex gap-4 items-center">
+        <button class="primary-btn">
+          <img
+            src="/assets/icons/mobile.svg"
+            alt="phone"
+            class="w-[25px] h-[25px] mr-2"
+          />
+          (618) 567-2106
+        </button>
+        <button class="secondary-btn">
+          <img
+            src="/assets/icons/notes.svg"
+            alt="phone"
+            class="w-[25px] h-[25px] mr-2"
+          />
+          Free Estimate
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav Items -->
+  <div class="w-full bg-black text-white h-[50px] hidden min-[700px]:flex">
+    <div
+      class="flex items-center max-w-[1800px] pl-[10px] md:pl-[50px] lg:pl-[133px] h-full px-4"
+      id="nav-menu"
+    >
+      <ul class="flex gap-16 nav-links w-full"></ul>
+    </div>
+  </div>
+  <!-- Nav Items -->
+</nav>
