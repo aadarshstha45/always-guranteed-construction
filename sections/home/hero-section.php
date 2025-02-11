@@ -1,5 +1,5 @@
 <section
-  class="w-full  bg-[url(<?= base_URL ?>/assets/images/home-banner.png)]  bg-cover bg-center bg-no-repeat relative h-[500px] sm:h-[600px] lg:h-[700px] 2xl:h-[900px]">
+  class="w-full  bg-[url(<?= BASE_URL ?>/assets/images/home-banner.png)]  bg-cover bg-center bg-no-repeat relative h-[500px] sm:h-[600px] lg:h-[700px] 2xl:h-[900px]">
   <div
     class="absolute top-0 left-0 w-full h-full bg-[rgba(26,26,26,0.75)]"></div>
 
