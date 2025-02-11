@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Viga";
+  src: url("/constructions/assets/fonts/Viga.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/constructions/assets/fonts/Roboto.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("/constructions/assets/fonts/SofiaSans.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/constructions/assets/fonts/DMSans.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  @apply box-border m-0 p-0;
+}
+
+body {
+  @apply font-roboto max-w-[100dvw] overflow-x-hidden;
+}
+
+.primary-btn {
+  @apply flex items-center justify-center px-6 py-3 text-white font-medium rounded-[50px] shadow-md bg-gradient-to-b from-[#005CDC] to-[#0E4FA9] hover:opacity-90 active:scale-[0.98] transition shrink-0;
+}
+
+.primary-btn-2 {
+  @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-500 active:scale-[0.98] text-white rounded-[50px] text-[18px];
+}
+
+.secondary-btn {
+  @apply flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50  rounded-[50px] shadow-[0px_8px_24px_0px_rgba(149,157,165,0.20)] hover:opacity-90 active:scale-[0.98] transition text-[#064091] font-medium text-[18px];
+}
+
+.text-heading {
+  @apply text-[30px] sm:text-[36px] lg:text-[40px] 2xl:text-[48px] font-viga leading-[60px];
+}
+
+.text-caption {
+  @apply text-[14px] sm:text-[16px] lg:text-[18px]  font-roboto  font-bold capitalize drop-shadow-[0px_8px_24px_rgba(0,0,0,0.20)];
+}
+
+.swiper-navigation {
+  @apply absolute top-[50%] translate-y-[-50%] z-[99] bg-white p-[10px] rounded-full w-[35px] h-[35px] flex items-center justify-center;
+}
+
+.input-text {
+  @apply h-[40px] rounded-[5px] border-[1px] border-[#7E7E7E] bg-white p-6;
+}
