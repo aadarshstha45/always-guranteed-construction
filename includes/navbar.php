@@ -2,8 +2,8 @@
 $navItems = [
     ["name" => "Home", "link" => BASE_URL],
     ["name" => "About Us", "link" => "about"],
-    ["name" => "Services", "link" =>"services"],
-    ["name" => "Our Work", "link" =>"our-work"],
+    ["name" => "Services", "link" => "services"],
+    ["name" => "Our Work", "link" => "our-work"],
     ["name" => "Reviews", "link" => "reviews"],
     ["name" => "Contact Us", "link" => "contact-us"],
 ];
@@ -30,7 +30,7 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
     <!-- Navbar -->
     <div class="w-full bg-white">
         <div class="flex items-center justify-between mx-auto max-w-[1800px] px-[10px] md:px-[20px]">
-            <img src="/constructions/assets/images/logo.png" alt="logo" class="w-[250px] h-[100px] md:w-[314px] md:h-[134px]" />
+            <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="logo" class="w-[250px] h-[100px] md:w-[314px] md:h-[134px]" />
 
             <!-- Button to Open Drawer -->
             <button onclick="openDrawer()" class="px-6 py-3 bg-blue-500 text-white rounded-full m-4 flex min-[700px]:hidden">
@@ -47,7 +47,7 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
                         <?php foreach ($navItems as $item): ?>
                             <li>
                                 <a href="<?= $item['link']; ?>"
-                                   class="hover:text-[#005CDC] text-[20px] min-[700px]:text-[15px] min-[700px]:text-white 
+                                    class="hover:text-[#005CDC] text-[20px] min-[700px]:text-[15px] min-[700px]:text-white 
                                    <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium' : 'text-black border-b-transparent'; ?>">
                                     <?= $item['name']; ?>
                                 </a>
@@ -60,11 +60,11 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
             <!-- Desktop Nav Items -->
             <div class="hidden min-[700px]:flex gap-4 items-center">
                 <button class="primary-btn">
-                    <img src="/constructions/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
+                    <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
                     (618) 567-2106
                 </button>
                 <button class="secondary-btn">
-                    <img src="/constructions/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
+                    <img src="<?= BASE_URL ?>/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
                     Free Estimate
                 </button>
             </div>
@@ -78,7 +78,7 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
                 <?php foreach ($navItems as $item): ?>
                     <li>
                         <a href="<?= $item['link']; ?>"
-                           class="hover:text-[#005CDC] text-[20px] min-[700px]:text-[15px] min-[700px]:text-white 
+                            class="hover:text-[#005CDC] text-[20px] min-[700px]:text-[15px] min-[700px]:text-white 
                            <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium' : 'text-black border-b-transparent'; ?>">
                             <?= $item['name']; ?>
                         </a>

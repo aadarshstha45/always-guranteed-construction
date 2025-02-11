@@ -1,5 +1,9 @@
 <?php
-define("BASE_URL", "http://localhost/constructions"); // Change to your actual domain
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST']; // Gets the domain name (e.g., localhost or example.com)
+$basePath = dirname($_SERVER['SCRIPT_NAME']); // Gets the base path (e.g., /constructions)
+
+define("BASE_URL", $protocol . '://' . $host . $basePath); // Construct dynamic base URL
 ?>
 
 <?php
