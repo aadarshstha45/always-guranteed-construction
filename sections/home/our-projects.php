@@ -10,7 +10,7 @@ $works = [
 
 ?>
 
-<section id="our-projects" class=" py-[50px] md:py-[76px] px-[5px]">
+<section id="our-projects" class="opacity-0 -translate-y-20 transform transition-all duration-700 py-[50px] md:py-[76px] px-[5px]">
     <div class="flex flex-col gap-2 items-center justify-center w-full max-w-[1200px] mx-auto">
         <p class="text-caption">Our Projects</p>
         <p class="text-heading">Latest <span class="text-primary-500">Works</span></p>

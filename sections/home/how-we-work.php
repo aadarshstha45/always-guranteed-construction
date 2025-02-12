@@ -8,7 +8,9 @@ $data = [
 
 ?>
 
-<section class="flex flex-col items-center justify-center gap-[10px] py-[50px] md:py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
+<section
+    id="how-we-work"
+    class="opacity-0 scale-0 transform transition-all duration-1000 flex flex-col items-center justify-center gap-[10px] py-[50px] md:py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
 
     <p class="text-caption text-[#565656] text-center">How we work</p>
     <p class="text-heading text-center">How We

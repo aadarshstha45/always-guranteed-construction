@@ -45,5 +45,42 @@
   <script src="assets/js/fancybox.js"></script>
 </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "translate-y-0");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    // Observe the elements
+    const contact = document.getElementById("contact-us");
+    const reviews = document.getElementById("reviews");
+    const ourProjects = document.getElementById("our-projects");
+    const services = document.getElementById("services");
+    const aboutUs = document.getElementById("about-us");
+    if (contact) {
+      observer.observe(contact);
+    }
+    if (reviews) {
+      observer.observe(reviews);
+    }
+    if (ourProjects) {
+      observer.observe(ourProjects);
+    }
+    if (services) {
+      observer.observe(services);
+    }
+    if (aboutUs) {
+      observer.observe(aboutUs);
+    }
+
+  });
+</script>
+
 <body class="min-h-screen flex flex-col">
   <?php include_once("includes/navbar.php"); ?>

@@ -25,22 +25,29 @@ $slides = [
 
 <div
   class="bg-[#F8F8F8] py-[50px] sm:py-[86px] flex flex-col items-center justify-center relative">
+
   <img
     src="assets/images/what-we-offer.png"
     alt="What We Offer"
     class="absolute bottom-0 right-0" />
-  <p class="text-caption leading-[50px] text-[#565656]">What We Offer</p>
-  <p class="text-heading">
-    See What We're
-    <span class="text-primary-500">Offering</span>
-  </p>
-  <p
-    class="text-center text-[#6D6D6D] max-w-[855px] mx-auto leading-[30px] mt-3">
-    Whether it’s repairing or replacing or remodeling your home or business,
-    <span class="text-primary-500">Always Guaranteed Construction </span>is
-    committed to ensuring the work needed is completed fast, efficiently.
-  </p>
-  <div class="swiper offerSlider max-w-[1440px] w-full mx-auto">
+  <div
+    id="offer-header"
+    class="flex flex-col items-center opacity-0 transform -translate-y-10 transition-all  duration-700 ease-in-out">
+    <p class="text-caption leading-[50px] text-[#565656]">What We Offer</p>
+    <p class="text-heading">
+      See What We're
+      <span class="text-primary-500">Offering</span>
+    </p>
+    <p
+      class="text-center text-[#6D6D6D] max-w-[855px] mx-auto leading-[30px] mt-3">
+      Whether it’s repairing or replacing or remodeling your home or business,
+      <span class="text-primary-500">Always Guaranteed Construction </span>is
+      committed to ensuring the work needed is completed fast, efficiently.
+    </p>
+  </div>
+  <div
+    id="offer-slider"
+    class="swiper offerSlider max-w-[1440px] w-full mx-auto opacity-0 scale-0 transform transition-all  duration-1000 ease-in-out">
     <div class="swiper-wrapper">
       <?php for ($i = 0; $i < 3; $i++): ?>
         <?php foreach ($slides as $slide): ?>

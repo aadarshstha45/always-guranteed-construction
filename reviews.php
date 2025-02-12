@@ -4,7 +4,9 @@
     $sectionTitle = "Reviews";
     include 'includes/banner.php';
     ?>
-    <div class="py-10 min-h-[60vh] px-4 w-full max-w-[95dvw]  sm:max-w-[80dvw] lg:max-w-[70dvw] mx-auto">
+    <div
+        id="reviews"
+        class="opacity-0 transform -translate-y-10 transition-all duration-700 py-10 min-h-[60vh] px-4 w-full max-w-[95dvw]  sm:max-w-[80dvw] lg:max-w-[70dvw] mx-auto">
         <div class="grid grid-cols-3 gap-5">
             <!-- Column 1 -->
             <div class="flex flex-col col-span-1">

@@ -22,12 +22,16 @@ $testimonials = [
 ?>
 
 <section id="clients-reviews" class="bg-primary-500 py-[50px] md:py-[76px] px-[5px] flex flex-col gap-6 items-center justify-center">
-    <p class="text-caption text-black">Client's Reviews</p>
-    <p class="text-heading max-w-[511px] text-white text-center">What Our Customers Are Saying</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-        <path d="M26.25 39.0533L10.1517 55.1516L4.84834 49.8484L18.75 35.9467V33.75H3.75V7.5H26.25V39.0533Z" fill="black" />
-        <path d="M33.75 33.75H48.75V35.9467L34.8483 49.8484L40.1516 55.1516L56.25 39.0533V7.5H33.75V33.75Z" fill="black" />
-    </svg>
+    <div
+        id="clients-reviews-header"
+        class="w-full flex flex-col gap-6 items-center transform -translate-y-20 transition-all opacity-0 duration-700">
+        <p class="text-caption text-black">Client's Reviews</p>
+        <p class="text-heading max-w-[511px] text-white text-center">What Our Customers Are Saying</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M26.25 39.0533L10.1517 55.1516L4.84834 49.8484L18.75 35.9467V33.75H3.75V7.5H26.25V39.0533Z" fill="black" />
+            <path d="M33.75 33.75H48.75V35.9467L34.8483 49.8484L40.1516 55.1516L56.25 39.0533V7.5H33.75V33.75Z" fill="black" />
+        </svg>
+    </div>
     <div class="swiper reviewSwiper max-w-[1200px] px-4  w-full mx-auto ">
         <div class="swiper-wrapper ">
             <?php foreach ($testimonials as $testimonial) : ?>
@@ -56,7 +60,11 @@ $testimonials = [
         </button>
     </div>
 
-    <button class="outline-btn w-[218px] h-[60px] z-10 text-white hover:bg-gray-50 hover:text-gray-900">Leave a Review</button>
+    <a href="reviews">
+        <button class="outline-btn w-[218px] h-[60px] z-10 text-white hover:bg-gray-50 hover:text-gray-900">
+            Leave a Review
+        </button>
+    </a>
 
 </section>
 

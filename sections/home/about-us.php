@@ -6,7 +6,9 @@
       class="absolute -top-10 left-12" />
     <div class="grid grid-cols-1 min-[860px]:grid-cols-2 gap-8 relative">
       <!-- Grid 1 -->
-      <div class="relative">
+      <div
+        id="about-grid-1"
+        class="relative opacity-0 transform -translate-y-10 transition-all  duration-700 ease-in-out">
         <img
           src="assets/images/about-us.png"
           alt="Our Roots"
@@ -29,7 +31,9 @@
       <!-- Grid 1 -->
 
       <!-- Grid 2 -->
-      <div class="flex flex-col gap-4 justify-center h-full w-fulll md:p-4">
+      <div
+        id="about-grid-2"
+        class="opacity-0 transform  transition-all scale-0  duration-[1s] flex flex-col gap-4 justify-center h-full w-full md:p-4">
         <div class="flex items-center gap-4">
           <p class="text-caption text-[#565656]">ABOUT US</p>
         </div>
