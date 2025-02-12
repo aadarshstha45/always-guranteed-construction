@@ -1,8 +1,8 @@
 <section
-  class="w-full  bg-[url(<?= BASE_URL ?>/assets/images/home-banner.png)]  bg-cover bg-center bg-no-repeat relative h-[500px] sm:h-[600px] lg:h-[700px] 2xl:h-[900px]">
+  class="w-full  relative h-[500px] sm:h-[600px] lg:h-[700px] 2xl:h-[900px]">
   <div
     class="absolute top-0 left-0 w-full h-full bg-[rgba(26,26,26,0.75)]"></div>
-
+  <img src="assets/images/home-banner.png" alt="Home Banner" class="w-full h-full object-cover object-center absolute top-0 left-0 -z-10">
   <div
     class="flex flex-col gap-[18px] px-[10px] min-[800px]:pl-[50px] lg:pl-[100px] 2xl:pl-[133px] items-start relative w-full h-full justify-center">
     <p class="text-caption text-primary-500 uppercase">

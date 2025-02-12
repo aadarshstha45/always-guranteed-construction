@@ -24,7 +24,7 @@ $slides = [
 ?>
 
 <div
-  class="bg-[#F8F8F8] py-[86px] flex flex-col items-center justify-center relative">
+  class="bg-[#F8F8F8] py-[50px] sm:py-[86px] flex flex-col items-center justify-center relative">
   <img
     src="assets/images/what-we-offer.png"
     alt="What We Offer"
@@ -40,7 +40,7 @@ $slides = [
     <span class="text-primary-500">Always Guaranteed Construction </span>is
     committed to ensuring the work needed is completed fast, efficiently.
   </p>
-  <div class="swiper mySwiper max-w-[1440px] w-full mx-auto">
+  <div class="swiper offerSlider max-w-[1440px] w-full mx-auto">
     <div class="swiper-wrapper">
       <?php for ($i = 0; $i < 3; $i++): ?>
         <?php foreach ($slides as $slide): ?>
@@ -61,10 +61,10 @@ $slides = [
         <?php endforeach; ?>
       <?php endfor; ?>
     </div>
-    <button class="swiper-navigation left-0" onclick="handlePrevSlide()">
+    <button class="swiper-navigation left-0" onclick="slideBefore()">
       <img src="assets/icons/caret.svg" alt="Previous" />
     </button>
-    <button class="swiper-navigation right-0" onclick="handleNextSlide()">
+    <button class="swiper-navigation right-0" onclick="slideAfter()">
       <img src="assets/icons/caret.svg" alt="Previous" class="rotate-180" />
     </button>
   </div>
@@ -72,7 +72,7 @@ $slides = [
 </div>
 
 <script>
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".offerSlider", {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
@@ -95,11 +95,11 @@ $slides = [
     },
   });
 
-  handleNextSlide = () => {
+  slideAfter = () => {
     swiper.slideNext();
   };
 
-  handlePrevSlide = () => {
+  slideBefore = () => {
     swiper.slidePrev();
   };
 </script>

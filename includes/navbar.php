@@ -33,8 +33,8 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
             <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="logo" class="w-[250px] h-[100px] md:w-[314px] md:h-[134px]" />
 
             <!-- Button to Open Drawer -->
-            <button onclick="openDrawer()" class="px-6 py-3 bg-blue-500 text-white rounded-full m-4 flex min-[700px]:hidden">
-                Open Drawer
+            <button onclick="openDrawer()" class="primary-btn flex min-[700px]:hidden">
+                <img src="assets/icons/hamburger.svg" alt="menu" class="w-[30px] h-[30px]" />
             </button>
 
             <!-- Drawer Component -->
