@@ -8,6 +8,7 @@ $navItems = [
     ["name" => "Contact Us", "link" => "contact"],
 ];
 $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+$path = $pathname . str_split($pathname)[strlen($pathname) - 1] === '/' ? '' : '/';
 ?>
 
 <nav class="flex flex-col w-full">
@@ -46,7 +47,7 @@ $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
                         <?php foreach ($navItems as $item): ?>
                             <a href="<?= $item['link']; ?>"
                                 class="hover:text-primary-500 border-b-2 hover:border-b-primary-500 text-[20px] w-max 
-                                   <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-black border-b-transparent'; ?>">
+                                   <?= ($path === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-black border-b-transparent'; ?>">
                                 <?= $item['name']; ?>
                             </a>
                         <?php endforeach; ?>
