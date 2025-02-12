@@ -1,6 +1,6 @@
 <?php
 $navItems = [
-    ["name" => "Home", "link" => base_URL],
+    ["name" => "Home", "link" => "/"],
     ["name" => "About Us", "link" => "about"],
     ["name" => "Services", "link" => "services"],
     ["name" => "Our Work", "link" => "our-works"],
@@ -8,7 +8,6 @@ $navItems = [
     ["name" => "Contact Us", "link" => "contact"],
 ];
 $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-$path = $pathname . str_split($pathname)[strlen($pathname) - 1] === '/' ? '' : '/';
 ?>
 
 <nav class="flex flex-col w-full">
@@ -47,7 +46,7 @@ $path = $pathname . str_split($pathname)[strlen($pathname) - 1] === '/' ? '' : '
                         <?php foreach ($navItems as $item): ?>
                             <a href="<?= $item['link']; ?>"
                                 class="hover:text-primary-500 border-b-2 hover:border-b-primary-500 text-[20px] w-max 
-                                   <?= ($path === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-black border-b-transparent'; ?>">
+                                   <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-black border-b-transparent'; ?>">
                                 <?= $item['name']; ?>
                             </a>
                         <?php endforeach; ?>
@@ -104,7 +103,7 @@ $path = $pathname . str_split($pathname)[strlen($pathname) - 1] === '/' ? '' : '
                     <a href="<?= $item['link']; ?>"
                         class="w-max h-full">
                         <li class="flex items-center border-b-2 h-full md:text-[18px] xl:text-[20px] hover:text-primary-500 hover:border-b-primary-500 transition-all duration-300
-                    <?= ($path === $item['link'] || ($path !== '/' && strpos($path, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
+                    <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
                     ">
 
                             <?= $item['name']; ?>

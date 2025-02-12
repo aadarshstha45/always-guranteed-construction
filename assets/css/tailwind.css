@@ -1762,7 +1762,7 @@ video {
 @font-face {
   font-family: "Viga";
 
-  src: url("assets/fonts/Viga.ttf");
+  src: url("/assets/fonts/Viga.ttf");
 
   font-weight: normal;
 
@@ -1772,7 +1772,7 @@ video {
 @font-face {
   font-family: "Roboto";
 
-  src: url("assets/fonts/Roboto.ttf");
+  src: url("/assets/fonts/Roboto.ttf");
 
   font-weight: normal;
 
@@ -1782,7 +1782,7 @@ video {
 @font-face {
   font-family: "SofiaSans";
 
-  src: url("assets/fonts/SofiaSans.ttf");
+  src: url("/assets/fonts/SofiaSans.ttf");
 
   font-weight: normal;
 
@@ -1792,7 +1792,7 @@ video {
 @font-face {
   font-family: "DMSans";
 
-  src: url("assets/fonts/DMSans.ttf");
+  src: url("/assets/fonts/DMSans.ttf");
 
   font-weight: normal;
 
