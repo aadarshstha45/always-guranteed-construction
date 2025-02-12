@@ -62,7 +62,7 @@ $testimonials = [
 
 <!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper(".reviewSwiper", {
+    var reviewSwiper = new Swiper(".reviewSwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -73,10 +73,10 @@ $testimonials = [
         speed: 2000,
     });
     nextSlide = () => {
-        swiper.slideNext();
+        reviewSwiper.slideNext();
     };
 
     prevSlide = () => {
-        swiper.slidePrev();
+        reviewSwiper.slidePrev();
     };
 </script>

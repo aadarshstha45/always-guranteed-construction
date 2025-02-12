@@ -61,11 +61,11 @@ $slides = [
         <?php endforeach; ?>
       <?php endfor; ?>
     </div>
-    <button class="swiper-navigation left-0" onclick="slideBefore()">
+    <button class="swiper-navigation hover:bg-gray-50 z-10 left-0" onclick="slideBefore()">
       <img src="assets/icons/caret.svg" alt="Previous" />
     </button>
-    <button class="swiper-navigation right-0" onclick="slideAfter()">
-      <img src="assets/icons/caret.svg" alt="Previous" class="rotate-180" />
+    <button class="swiper-navigation hover:bg-gray-50 z-10 right-0" onclick="slideAfter()">
+      <img src="assets/icons/caret.svg" alt="Next" class="rotate-180" />
     </button>
   </div>
   <button class="primary-btn-2 w-[170px] h-[60px] z-10">View More</button>
