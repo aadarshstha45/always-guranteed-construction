@@ -104,7 +104,7 @@ $path = $pathname . str_split($pathname)[strlen($pathname) - 1] === '/' ? '' : '
                     <a href="<?= $item['link']; ?>"
                         class="w-max h-full">
                         <li class="flex items-center border-b-2 h-full md:text-[18px] xl:text-[20px] hover:text-primary-500 hover:border-b-primary-500 transition-all duration-300
-                    <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
+                    <?= ($path === $item['link'] || ($path !== '/' && strpos($path, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
                     ">
 
                             <?= $item['name']; ?>
