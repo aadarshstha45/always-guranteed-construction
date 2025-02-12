@@ -10,6 +10,8 @@ $allowed_pages = [
     'about',
     'services',
     'our-works',
+    'reviews',
+    'contact'
 ];
 
 // Ensure the requested page is in the allowed list

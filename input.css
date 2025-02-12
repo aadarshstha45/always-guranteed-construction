@@ -4,28 +4,28 @@
 
 @font-face {
   font-family: "Viga";
-  src: url("/assets/fonts/Viga.ttf");
+  src: url("/constructions/assets/fonts/Viga.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/Roboto.ttf");
+  src: url("/constructions/assets/fonts/Roboto.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SofiaSans";
-  src: url("/assets/fonts/SofiaSans.ttf");
+  src: url("/constructions/assets/fonts/SofiaSans.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DMSans";
-  src: url("/assets/fonts/DMSans.ttf");
+  src: url("/constructions/assets/fonts/DMSans.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -40,6 +40,10 @@ body {
 
 .outline-btn {
   @apply flex items-center justify-center px-6 py-3  font-medium rounded-[50px] shadow-md border-[1px] hover:opacity-90 active:scale-[0.98] transition shrink-0;
+}
+
+.submit-btn {
+  @apply flex items-center justify-center px-6 py-3 text-white font-medium rounded-[5px] shadow-md bg-primary-500 hover:opacity-90 active:scale-[0.98] transition shrink-0;
 }
 
 .primary-btn {
@@ -71,5 +75,5 @@ body {
 }
 
 .input-text {
-  @apply h-[40px] rounded-[5px] border-[1px] border-[#7E7E7E] bg-white p-6;
+  @apply h-[40px] rounded-[5px] border-[1px] border-[#7E7E7E] bg-white py-6 px-4 outline outline-0 ring-primary-500 focus:ring-2;
 }
