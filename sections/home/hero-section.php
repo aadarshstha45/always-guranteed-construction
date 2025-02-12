@@ -22,7 +22,7 @@
       </button>
       <button
         class="hidden min-[299px]:flex bg-white rounded-full h-[60px] w-[60px] items-center justify-center">
-        <img src="/constructions/assets/icons/call.svg"
+        <img src="assets/icons/call.svg"
           </button>
     </div>
   </div>
