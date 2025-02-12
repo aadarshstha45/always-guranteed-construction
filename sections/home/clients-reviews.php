@@ -28,11 +28,11 @@ $testimonials = [
         <path d="M26.25 39.0533L10.1517 55.1516L4.84834 49.8484L18.75 35.9467V33.75H3.75V7.5H26.25V39.0533Z" fill="black" />
         <path d="M33.75 33.75H48.75V35.9467L34.8483 49.8484L40.1516 55.1516L56.25 39.0533V7.5H33.75V33.75Z" fill="black" />
     </svg>
-    <div class="swiper reviewSwiper max-w-[1440px] px-4  w-full mx-auto ">
-        <div class="swiper-wrapper  ">
+    <div class="swiper reviewSwiper max-w-[1200px] px-4  w-full mx-auto ">
+        <div class="swiper-wrapper ">
             <?php foreach ($testimonials as $testimonial) : ?>
-                <div class="swiper-slide  mx-auto  max-w-[1200px]">
-                    <div class=" flex flex-col items-center gap-6 px-3">
+                <div class="swiper-slide">
+                    <div class=" flex flex-col items-center gap-6 px-3 max-w-[1030px] mx-auto">
                         <p class="text-white leading-[30px] text-[16px] md:text-[18px] text-center"><?= $testimonial['message'] ?></p>
                         <!-- <div class="flex items-center gap-2">
                         <?php for ($i = 0; $i < 5; $i++) : ?>
