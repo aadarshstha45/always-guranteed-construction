@@ -1,4 +1,5 @@
 <section
+  id="get-in-touch-section"
   class="w-full relative min-h-[200px] py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
   <div class="absolute bg-black/70 top-0 left-0 w-full h-full"></div>
   <img src="assets/images/contact-bg.png" alt="Contact Background"

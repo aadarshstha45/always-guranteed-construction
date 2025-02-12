@@ -17,21 +17,3 @@
 
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("opacity-100", "translate-y-0");
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-
-        // Observe the elements
-        observer.observe(document.getElementById("about-title"));
-        observer.observe(document.getElementById("about-content"));
-    });
-</script>

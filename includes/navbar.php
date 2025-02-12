@@ -1,16 +1,13 @@
 <?php
 $navItems = [
-    ["name" => "Home", "link" => BASE_URL],
+    ["name" => "Home", "link" => base_URL],
     ["name" => "About Us", "link" => "about"],
     ["name" => "Services", "link" => "services"],
     ["name" => "Our Work", "link" => "our-works"],
     ["name" => "Reviews", "link" => "reviews"],
     ["name" => "Contact Us", "link" => "contact"],
 ];
-
-$pathname = $_SERVER['REQUEST_URI']; // Get current path
-
-
+$pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 ?>
 
 <nav class="flex flex-col w-full">
@@ -48,8 +45,8 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
                     <div class="flex flex-col gap-6 nav-links">
                         <?php foreach ($navItems as $item): ?>
                             <a href="<?= $item['link']; ?>"
-                                class="hover:text-[#005CDC] text-[20px]
-                                   <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium' : 'text-black border-b-transparent'; ?>">
+                                class="hover:text-primary-500 border-b-2 hover:border-b-primary-500 text-[20px] w-max 
+                                   <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-black border-b-transparent'; ?>">
                                 <?= $item['name']; ?>
                             </a>
                         <?php endforeach; ?>
@@ -81,12 +78,14 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
                 </div>
             </div>
 
-            <!-- Desktop Nav Items -->
             <div class="hidden min-[710px]:flex gap-4 items-center">
-                <button class="primary-btn">
-                    <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
-                    (618) 567-2106
-                </button>
+                <a href="tel:<?= phone ?>" class="hover:text-[#005CDC] text-[20px]">
+
+                    <button class="primary-btn">
+                        <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
+                        <?= phone ?>
+                    </button>
+                </a>
                 <button class="secondary-btn">
                     <img src="<?= BASE_URL ?>/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
                     Free Estimate
@@ -95,18 +94,21 @@ $pathname = $_SERVER['REQUEST_URI']; // Get current path
         </div>
     </div>
 
-    <!-- Desktop Nav Menu -->
+    <!-- Desktop Nav Items -->
+
     <div class="w-full bg-black text-white h-[50px] hidden min-[710px]:flex">
         <div class="flex items-center max-w-[1800px] pl-[10px] md:pl-[50px] lg:pl-[133px] h-full px-4" id="nav-menu">
-            <ul class="flex gap-16 nav-links w-full">
+            <ul class="flex items-center gap-8 md:gap-12 xl:gap-16 nav-links w-full h-full ">
                 <?php foreach ($navItems as $item): ?>
-                    <li>
-                        <a href="<?= $item['link']; ?>"
-                            class="hover:text-[#005CDC] text-[20px] min-[710px]:text-[15px] min-[710px]:text-white 
-                           <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium' : 'text-black border-b-transparent'; ?>">
+                    <a href="<?= $item['link']; ?>"
+                        class="w-max h-full">
+                        <li class="flex items-center border-b-2 h-full md:text-[18px] xl:text-[20px] hover:text-primary-500 hover:border-b-primary-500 transition-all duration-300
+                    <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
+                    ">
+
                             <?= $item['name']; ?>
-                        </a>
-                    </li>
+                        </li>
+                    </a>
                 <?php endforeach; ?>
             </ul>
         </div>

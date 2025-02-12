@@ -43,7 +43,7 @@
                 }
             });
         }, {
-            threshold: 0.2
+            threshold: 0.1
         });
         // Observe the elements
         observer2.observe(document.getElementById("about-grid-2"));

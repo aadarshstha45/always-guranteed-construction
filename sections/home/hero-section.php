@@ -19,13 +19,17 @@
       roofing needs! Contact us today to request free quotes and estimates.
     </p>
     <div class="flex flex-wrap gap-4">
-      <button class="primary-btn h-[60px] sm:w-[251px]">
-        Book an Appointment
-      </button>
-      <button
-        class="hidden min-[299px]:flex bg-white rounded-full h-[60px] w-[60px] items-center justify-center">
-        <img src="assets/icons/call.svg"
-          </button>
+      <a href="#get-in-touch-section">
+        <button class="primary-btn h-[60px] sm:w-[251px]">
+          Book an Appointment
+        </button>
+      </a>
+      <a href="tel:<?= phone ?>">
+        <button
+          class="hidden min-[299px]:flex bg-white hover:bg-gray-50 rounded-full h-[60px] w-[60px] items-center justify-center">
+          <img src="assets/icons/call.svg" />
+        </button>
+      </a>
     </div>
   </div>
 </section>

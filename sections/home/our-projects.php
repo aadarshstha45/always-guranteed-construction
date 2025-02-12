@@ -22,7 +22,7 @@ $works = [
             <?php endforeach; ?>
             <div class="relative aspect-square overflow-hidden">
                 <img src="assets/images/work6.png" alt="work" class="object-cover w-full h-full" />
-                <a href="#">
+                <a href="our-works">
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center gap-4">
                         <p class="text-white text-[16px] leading-[75px] md:text-[20px] uppercase">View More</p>
                     </div>
