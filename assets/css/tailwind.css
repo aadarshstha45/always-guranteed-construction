@@ -681,6 +681,11 @@ video {
   margin-right: auto;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -723,6 +728,10 @@ video {
 
 .mt-\[10px\] {
   margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -817,6 +826,10 @@ video {
   height: 100%;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .max-h-\[282px\] {
   max-height: 282px;
 }
@@ -847,6 +860,18 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-12 {
+  min-height: 3rem;
+}
+
+.min-h-8 {
+  min-height: 2rem;
+}
+
+.min-h-10 {
+  min-height: 2.5rem;
 }
 
 .w-10 {
@@ -930,6 +955,10 @@ video {
   width: max-content;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
 .min-w-\[200px\] {
   min-width: 200px;
 }
@@ -945,6 +974,18 @@ video {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.min-w-12 {
+  min-width: 3rem;
+}
+
+.min-w-8 {
+  min-width: 2rem;
+}
+
+.min-w-10 {
+  min-width: 2.5rem;
 }
 
 .max-w-\[1030px\] {
@@ -1179,6 +1220,10 @@ video {
 
 .gap-\[29px\] {
   gap: 29px;
+}
+
+.gap-0 {
+  gap: 0px;
 }
 
 .justify-self-end {
@@ -1613,6 +1658,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .uppercase {

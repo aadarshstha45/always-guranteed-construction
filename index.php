@@ -11,6 +11,7 @@ $allowed_pages = [
     'services',
     'our-works',
     'reviews',
+    'reviews-send',
     'contact',
     'contact-send',
     'free-estimate',

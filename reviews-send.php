@@ -48,9 +48,9 @@ if (empty($_POST['name'])) {
     <?php
     $message = ob_get_clean();
     if (!@mail($to, $subject, $message, $headers))
-        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #d35400; font-size: 25px; text-align: center;'>Sorry! sending mail failed. Try again.</p>";
+        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #d35400; font-size: 25px; text-align: center;'>Sorry! Request not sent. Please try again.</p>";
     else
-        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #27ae60; font-size: 25px; text-align: center;'>Your request is complete. We’ll get back to you soon. Thank you!</p>";
+        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #27ae60; font-size: 25px; text-align: center;'>Your review has been sent successfully. Thank you!</p>";
     ?>
 <?php }
 ?>
