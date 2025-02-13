@@ -672,6 +672,10 @@ video {
   grid-column: span 3 / span 3;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -723,6 +727,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1587,6 +1595,10 @@ video {
   font-size: 70px;
 }
 
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1761,7 +1773,7 @@ video {
 @font-face {
   font-family: "Viga";
 
-  src: url("/assets/fonts/Viga.ttf");
+  src: url("/constructions/assets/fonts/Viga.ttf");
 
   font-weight: normal;
 
@@ -1771,7 +1783,7 @@ video {
 @font-face {
   font-family: "Roboto";
 
-  src: url("/assets/fonts/Roboto.ttf");
+  src: url("/constructions/assets/fonts/Roboto.ttf");
 
   font-weight: normal;
 
@@ -1781,7 +1793,7 @@ video {
 @font-face {
   font-family: "SofiaSans";
 
-  src: url("/assets/fonts/SofiaSans.ttf");
+  src: url("/constructions/assets/fonts/SofiaSans.ttf");
 
   font-weight: normal;
 
@@ -1791,7 +1803,7 @@ video {
 @font-face {
   font-family: "DMSans";
 
-  src: url("/assets/fonts/DMSans.ttf");
+  src: url("/constructions/assets/fonts/DMSans.ttf");
 
   font-weight: normal;
 
@@ -2190,6 +2202,10 @@ body {
     left: 0.5rem;
   }
 
+  .sm\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .sm\:mt-\[30px\] {
     margin-top: 30px;
   }
@@ -2235,6 +2251,10 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2263,6 +2283,20 @@ body {
 
   .sm\:text-\[18px\] {
     font-size: 18px;
+  }
+
+  .sm\:text-\[20px\] {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 560px) {
+  .min-\[560px\]\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .min-\[560px\]\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2305,6 +2339,10 @@ body {
 @media (min-width: 768px) {
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
   }
 
   .md\:mt-\[40px\] {
@@ -2497,6 +2535,10 @@ body {
 
   .lg\:text-\[65px\] {
     font-size: 65px;
+  }
+
+  .lg\:text-\[24px\] {
+    font-size: 24px;
   }
 }
 

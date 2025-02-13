@@ -12,8 +12,9 @@ $allowed_pages = [
     'our-works',
     'reviews',
     'contact',
-    'free-estimate',
     'contact-send',
+    'free-estimate',
+    'free-estimate-send',
 ];
 
 // Ensure the requested page is in the allowed list

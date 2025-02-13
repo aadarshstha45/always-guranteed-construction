@@ -1,4 +1,7 @@
 <?php
+
+include 'config.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
     $name = htmlspecialchars($_POST['name']);
@@ -7,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Set the recipient email address
-    $to = "aadarshstha45@gmail.com";  // Replace with your email address
+    $to = email;  // Replace with your email address
 
     // Set the subject of the email
     $subject = "Contact Form Submission from " . $name;
@@ -26,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $body, $headers)) {
-        echo "Your message has been sent successfully.";
+        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #d35400; font-size: 25px; text-align: center;'> Your message has been sent successfully. </p>";
     } else {
-        echo "Sorry, something went wrong. Please try again.";
+        echo "<p style='color: #fff; margin: 0; padding: 20px 0; background: #27ae60; font-size: 25px; text-align: center;'>Sorry, something went wrong. Please try again.</p>";
     }
 }

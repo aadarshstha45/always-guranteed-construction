@@ -28,7 +28,7 @@
 
   <!-- Twitter Card data for better appearance on Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Always Guaranteed Construction">>
+  <meta name="twitter:title" content="Always Guaranteed Construction">
   <meta name="twitter:description" content="Explore our portfolio of top-notch construction projects. We specialize in residential, commercial, and industrial construction services.">
   <meta name="twitter:image" content="https://example.com/your-image.jpg">
   <meta name="twitter:url" content="https://example.com">

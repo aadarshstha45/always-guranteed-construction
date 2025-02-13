@@ -22,26 +22,32 @@
     </div>
     <div
       class="bg-white py-[70px] px-[20px] min-[400px]:px-[48px] w-full h-full rounded-tr-[50px] border-l-[4px] border-l-primary-500">
-      <form class="grid grid-cols-1 min-[570px]:grid-cols-2 gap-6">
+      <form class="grid grid-cols-1 min-[570px]:grid-cols-2 gap-6"
+        action="contact-send.php" method="POST">
         <input
           type="text"
+          name="name"
           class="input-text col-span-2 min-[570px]:col-span-1"
           placeholder="Name: " />
 
         <input
           type="text"
+          name="phone"
           class="input-text col-span-2 min-[570px]:col-span-1"
           placeholder="Phone: " />
         <input
-          type="text"
+          type="email"
+          name="email"
           class="input-text col-span-2 min-[570px]:col-span-1"
           placeholder="Email: " />
 
         <input
           type="text"
+          name="address"
           class="input-text col-span-2 min-[570px]:col-span-1"
           placeholder="Address: " />
         <textarea
+          name="message"
           class="input-text col-span-2 min-h-[110px]"
           placeholder="Message: "></textarea>
         <button
