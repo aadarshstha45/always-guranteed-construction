@@ -11,7 +11,9 @@ $allowed_pages = [
     'services',
     'our-works',
     'reviews',
-    'contact'
+    'contact',
+    'free-estimate',
+    'contact-send',
 ];
 
 // Ensure the requested page is in the allowed list
@@ -19,11 +21,6 @@ if (!in_array($page, $allowed_pages)) {
     include("404.php");
     exit;
 }
-
-$title = 'New Remodeling';
-$phone = '(123) 359-5656';
-$email = 'newremodeling@gmail.com';
-$address = 'Phoenix, AZ 85024';
 
 include_once("includes/header.php");
 

@@ -23,7 +23,7 @@ $data = [
         <?php foreach ($data as $index => $item) : ?>
             <div class="flex flex-col items-center gap-[20px] ">
                 <div class="relative flex justify-center items-center w-[130px] h-[130px] rounded-[10px] bg-white shadow-[0px_5px_15px_0px_rgba(149,157,165,0.20)]">
-                    <img src="<?= $item['icon'] ?>" alt="icon" class="w-[50px] h-[50px]">
+                    <img src="<?= $item['icon'] ?>" alt="icon" class="w-[60px] h-[60px]">
                     <div class="flex items-center absolute w-[30px] h-[30px] rounded-full -top-3 -right-3 justify-center bg-primary-500 text-white">
                         <p class="text-[18px]  font-bold"><?= $index + 1 ?></p>
                     </div>

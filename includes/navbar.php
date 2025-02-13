@@ -51,10 +51,13 @@ $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
                             </a>
                         <?php endforeach; ?>
                         <div class="flex flex-col gap-4 items-center">
-                            <button class="primary-btn w-full">
-                                <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
-                                (618) 567-2106
-                            </button>
+                            <a href="tel:<?= phone ?>" class="hover:text-[#005CDC] text-[20px] w-full">
+
+                                <button class="primary-btn w-full">
+                                    <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
+                                    <?= phone ?>
+                                </button>
+                            </a>
                             <button class="secondary-btn w-full">
                                 <img src="<?= BASE_URL ?>/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
                                 Free Estimate
@@ -78,31 +81,33 @@ $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
                 </div>
             </div>
 
-            <div class="hidden min-[710px]:flex gap-4 items-center">
-                <a href="tel:<?= phone ?>" class="hover:text-[#005CDC] text-[20px]">
+            <div class="hidden min-[710px]:flex gap-4 items-center sm:pr-[0px] md:pr-[20px] lg:pr-[120px] xl:pr-[70px]">
+                <a href="tel:<?= phone ?>" class="hover:text-[#005CDC] sm:text-[18px] lg:text-[20px]">
 
                     <button class="primary-btn">
-                        <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
+                        <img src="<?= BASE_URL ?>/assets/icons/mobile.svg" alt="phone" class="w-[25px] h-[25px]" />
                         <?= phone ?>
                     </button>
                 </a>
-                <button class="secondary-btn">
-                    <img src="<?= BASE_URL ?>/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px] mr-2" />
-                    Free Estimate
-                </button>
+                <a href="free-estimate">
+                    <button class="secondary-btn sm:text-[18px] lg:text-[20px]">
+                        <img src="<?= BASE_URL ?>/assets/icons/notes.svg" alt="phone" class="w-[25px] h-[25px]" />
+                        Free Estimate
+                    </button>
+                </a>
             </div>
         </div>
     </div>
 
     <!-- Desktop Nav Items -->
 
-    <div class="w-full bg-black text-white h-[50px] hidden min-[710px]:flex">
+    <div class="w-full bg-black text-white h-[60px] hidden min-[710px]:flex">
         <div class="flex items-center max-w-[1800px] pl-[10px] md:pl-[50px] lg:pl-[133px] h-full px-4" id="nav-menu">
             <ul class="flex items-center gap-8 md:gap-12 xl:gap-16 nav-links w-full h-full ">
                 <?php foreach ($navItems as $item): ?>
                     <a href="<?= $item['link']; ?>"
                         class="w-max h-full">
-                        <li class="flex items-center border-b-2 h-full md:text-[18px] xl:text-[20px] hover:text-primary-500 hover:border-b-primary-500 transition-all duration-300
+                        <li class="flex items-center border-b-2 h-full md:text-[16px] xl:text-[18px] hover:text-primary-500 hover:border-b-primary-500 transition-all duration-300
                     <?= ($pathname === $item['link'] || ($pathname !== '/' && strpos($pathname, $item['link']) !== false)) ? 'text-primary-500 font-medium  border-b-primary-500' : 'text-white border-b-transparent'; ?>
                     ">
 

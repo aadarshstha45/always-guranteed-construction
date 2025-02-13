@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 
   <!-- Title tag (important for SEO) -->
-  <title>Your Construction Portfolio | Professional Construction Services</title>
+  <title>Always Guaranteed Construction</title>
 
   <!-- Meta description (appears in search engine results) -->
   <meta name="description" content="Explore our portfolio of top-notch construction projects, featuring residential, commercial, and industrial work. Contact us today for a consultation!">
@@ -18,24 +18,24 @@
   <meta name="keywords" content="construction portfolio, general contractor, construction services, residential construction, commercial construction, industrial construction, building contractor">
 
   <!-- Author tag (optional) -->
-  <meta name="author" content="Your Company Name">
+  <meta name="author" content="Always Guaranteed Construction">
 
   <!-- Open Graph tags for social media sharing (Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Your Construction Portfolio">
+  <meta property="og:title" content="Always Guaranteed Construction">
   <meta property="og:description" content="Explore our portfolio of top-notch construction projects. We specialize in residential, commercial, and industrial construction services.">
   <meta property="og:image" content="https://example.com/your-image.jpg">
-  <meta property="og:url" content="https://example.com">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card data for better appearance on Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Your Construction Portfolio">
+  <meta name="twitter:title" content="Always Guaranteed Construction">>
   <meta name="twitter:description" content="Explore our portfolio of top-notch construction projects. We specialize in residential, commercial, and industrial construction services.">
   <meta name="twitter:image" content="https://example.com/your-image.jpg">
   <meta name="twitter:url" content="https://example.com">
 
   <title>Document</title>
   <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/smtp.js"></script>
   <link href="assets/css/tailwind.css" rel="stylesheet" />
   <link href="assets/css/styles.css" rel="stylesheet" />
   <link href="assets/css/fancybox.css" rel="stylesheet" />

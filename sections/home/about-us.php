@@ -1,5 +1,6 @@
 <section class="py-[120px] relative">
-  <div class="container mx-auto p-4 max-w-[1440px] relative">
+  <div
+    class="container mx-auto p-4 max-w-[1440px] relative">
     <img
       src="assets/images/bg-grid.png"
       alt="Our Roots"
@@ -8,11 +9,11 @@
       <!-- Grid 1 -->
       <div
         id="about-grid-1"
-        class="relative opacity-0 transform -translate-y-10 transition-all  duration-700 ease-in-out">
+        class="relative opacity-0 transform -translate-y-10 transition-all  duration-700 ease-in-out ">
         <img
           src="assets/images/about-us.png"
           alt="Our Roots"
-          class="h-[450px] xl:h-[770px] max-h-770px w-full max-w-[500px] justify-self-end object-cover" />
+          class="h-[450px] xl:h-[670px] max-h-670px w-full max-w-[500px] justify-self-end object-cover" />
         <!-- card -->
         <div
           class="bg-gradient-to-b from-[#005CDC] to-[#003176] absolute -top-20 sm:-top-12 min-[1280px]:top-10 -left-3 sm:left-2 min-[1340px]:left-24 w-[200px] sm:w-[250px] p-[50px_42.47px_50px_42.67px] gap-[29px] flex flex-col items-center justify-center">
@@ -53,7 +54,9 @@
         </p>
         <div
           class="flex gap-4 flex-col sm:flex-row justify-between max-w-[565px]">
-          <button class="primary-btn-2 w-[170px] h-[60px]">Learn More</button>
+          <a href="about">
+            <button class="primary-btn-2 w-[170px] h-[60px]">Learn More</button>
+          </a>
           <img
             src="assets/images/bbb-logo1.png"
             alt="BBB Logo"

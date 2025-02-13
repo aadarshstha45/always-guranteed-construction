@@ -75,7 +75,9 @@ $slides = [
       <img src="assets/icons/caret.svg" alt="Next" class="rotate-180" />
     </button>
   </div>
-  <button class="primary-btn-2 w-[170px] h-[60px] z-10">View More</button>
+  <a href="services">
+    <button class="primary-btn-2 w-[170px] h-[60px] z-10">View More</button>
+  </a>
 </div>
 
 <script>
