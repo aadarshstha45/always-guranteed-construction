@@ -672,10 +672,6 @@ video {
   grid-column: span 3 / span 3;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -700,6 +696,10 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-20 {
@@ -728,10 +728,6 @@ video {
 
 .mt-\[10px\] {
   margin-top: 10px;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .flex {
@@ -826,16 +822,16 @@ video {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .max-h-\[282px\] {
   max-height: 282px;
 }
 
 .max-h-\[30px\] {
   max-height: 30px;
+}
+
+.min-h-10 {
+  min-height: 2.5rem;
 }
 
 .min-h-\[100px\] {
@@ -860,18 +856,6 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-12 {
-  min-height: 3rem;
-}
-
-.min-h-8 {
-  min-height: 2rem;
-}
-
-.min-h-10 {
-  min-height: 2.5rem;
 }
 
 .w-10 {
@@ -955,8 +939,8 @@ video {
   width: max-content;
 }
 
-.w-12 {
-  width: 3rem;
+.min-w-10 {
+  min-width: 2.5rem;
 }
 
 .min-w-\[200px\] {
@@ -974,18 +958,6 @@ video {
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
-}
-
-.min-w-12 {
-  min-width: 3rem;
-}
-
-.min-w-8 {
-  min-width: 2rem;
-}
-
-.min-w-10 {
-  min-width: 2.5rem;
 }
 
 .max-w-\[1030px\] {
@@ -1170,6 +1142,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -1220,10 +1196,6 @@ video {
 
 .gap-\[29px\] {
   gap: 29px;
-}
-
-.gap-0 {
-  gap: 0px;
 }
 
 .justify-self-end {
@@ -1640,10 +1612,6 @@ video {
   font-size: 70px;
 }
 
-.text-\[24px\] {
-  font-size: 24px;
-}
-
 .font-black {
   font-weight: 900;
 }
@@ -1652,16 +1620,16 @@ video {
   font-weight: 700;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-light {
-  font-weight: 300;
 }
 
 .uppercase {
@@ -1822,7 +1790,7 @@ video {
 @font-face {
   font-family: "Viga";
 
-  src: url("/constructions/assets/fonts/Viga.ttf");
+  src: url("/assets/fonts/Viga.ttf");
 
   font-weight: normal;
 
@@ -1832,7 +1800,7 @@ video {
 @font-face {
   font-family: "Roboto";
 
-  src: url("/constructions/assets/fonts/Roboto.ttf");
+  src: url("/assets/fonts/Roboto.ttf");
 
   font-weight: normal;
 
@@ -1842,7 +1810,7 @@ video {
 @font-face {
   font-family: "SofiaSans";
 
-  src: url("/constructions/assets/fonts/SofiaSans.ttf");
+  src: url("/assets/fonts/SofiaSans.ttf");
 
   font-weight: normal;
 
@@ -1852,7 +1820,7 @@ video {
 @font-face {
   font-family: "DMSans";
 
-  src: url("/constructions/assets/fonts/DMSans.ttf");
+  src: url("/assets/fonts/DMSans.ttf");
 
   font-weight: normal;
 
@@ -2251,10 +2219,6 @@ body {
     left: 0.5rem;
   }
 
-  .sm\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
   .sm\:mt-\[30px\] {
     margin-top: 30px;
   }
@@ -2298,10 +2262,6 @@ body {
 
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -2388,10 +2348,6 @@ body {
 @media (min-width: 768px) {
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
   }
 
   .md\:mt-\[40px\] {
@@ -2582,12 +2538,12 @@ body {
     font-size: 20px;
   }
 
-  .lg\:text-\[65px\] {
-    font-size: 65px;
-  }
-
   .lg\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .lg\:text-\[65px\] {
+    font-size: 65px;
   }
 }
 
