@@ -6,9 +6,6 @@
     <div
         id="about-us"
         class="py-10 flex flex-col gap-4 px-4 w-full max-w-[95dvw]  sm:max-w-[80dvw] lg:max-w-[70dvw] mx-auto opacity-0 transform -translate-y-10 transition-all duration-700">
-        <p class="text-[20px] w-max mt-4  border-b-2 pb-2 border-b-gray-600">
-            Who We Are & What We Stand For
-        </p>
         <div
             class="container mx-auto p-4 max-w-[1440px] relative pb-10 mt-20">
             <img
@@ -60,7 +57,6 @@
                     </p>
                     <div
                         class="flex gap-4 flex-col sm:flex-row justify-between max-w-[565px]">
-                        <button class="primary-btn-2 w-[170px] h-[60px]">Learn More</button>
                         <img
                             src="assets/images/bbb-logo1.png"
                             alt="BBB Logo"

@@ -5,19 +5,16 @@ $slides = [
     'title' => "Remodeling",
     'image' => "assets/images/service-1.png",
     'icon' => "assets/images/house.png",
-    'bg' => "bg-gradient-to-b from-[#005CDC] to-[#0D3875]",
   ],
   [
     'title' => "Roofing",
     'image' => "assets/images/service-2.png",
     'icon' => "assets/icons/roofing.svg",
-    'bg' => "bg-black",
   ],
   [
     'title' => "Custom Home",
     'image' => "assets/images/service-3.png",
     'icon' => "assets/images/house.png",
-    'bg' => "bg-black",
   ]
 ];
 
@@ -51,11 +48,16 @@ $slides = [
     <div class="swiper-wrapper">
       <?php for ($i = 0; $i < 3; $i++): ?>
         <?php foreach ($slides as $slide): ?>
-          <div class="swiper-slide  max-h-[282px] rounded-[5px] overflow-hidden relative">
+          <div
+            onmouseenter="handleHover(this)"
+            onmouseleave="handleHoverOut(this)"
+            class="swiper-slide  max-h-[282px] rounded-[5px] overflow-hidden relative">
             <img src="<?= $slide['image']; ?>" alt="<?= $slide['title']; ?>" class="rounded-[5px]" />
             <div class="absolute bottom-0 bg-gradient-to-t  from-black from-0% to-transparent to-100% w-full">
               <div class='flex gap-[16px] p-[30px]'>
-                <div class="<?= $slide['bg']; ?> outline  outline-white/70 outline-[7px] flex items-center justify-center aspect-square w-[57px] h-[57px] rounded-full p-[8px] ">
+                <div
+                  id="offer-icon"
+                  class="bg-black hover:bg-gradient-to-b from-[#005CDC] to-[#0D3875] outline  outline-white/70 outline-[7px] flex items-center justify-center aspect-square w-[57px] h-[57px] rounded-full p-[8px] ">
                   <img src="<?= $slide['icon']; ?>" alt="<?php echo $slide['title']; ?>" class='max-w-[30px] max-h-[30px] object-contain mx-auto aspect-square' />
                 </div>
                 <div class="flex flex-col items-start gap-1">
@@ -110,5 +112,15 @@ $slides = [
 
   slideBefore = () => {
     swiper.slidePrev();
+  };
+
+  handleHover = (e) => {
+    const icon = e.querySelector("#offer-icon");
+    icon.classList.add("bg-gradient-to-b");
+  };
+
+  handleHoverOut = (e) => {
+    const icon = e.querySelector("#offer-icon");
+    icon.classList.remove("bg-gradient-to-b");
   };
 </script>

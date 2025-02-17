@@ -32,7 +32,6 @@ $slides = [
     <div
         id="services"
         class="py-10 flex flex-col gap-4 px-4 w-full max-w-[95dvw]  sm:max-w-[80dvw] lg:max-w-[70dvw] mx-auto opacity-0 transform -translate-y-10 transition-all duration-700">
-        <p class="text-[20px] w-max mt-4  border-b-2 pb-2 border-b-gray-600">Services We Provide</p>
 
         <div class="grid grid-cols-1  min-[660px]:grid-cols-2 min-[1240px]:grid-cols-3 gap-4">
             <?php for ($i = 0; $i < 2; $i++): ?>
