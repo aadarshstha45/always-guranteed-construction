@@ -98,18 +98,17 @@ $testimonials = [
         const content = document.getElementById(`testimonial-${index}`);
         const icon = document.getElementById(`icon-${index}`);
 
-        console.log(trigger)
 
         if (content.style.maxHeight) {
             trigger.classList.remove("bg-gray-900", "text-white");
-            trigger.classList.add("hover:bg-gray-50");
+            trigger.classList.add("hover:bg-gray-50", 'bg-transparent');
             content.style.maxHeight = null;
             icon.innerText = "+";
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
             icon.innerText = "-";
             trigger.classList.add("bg-gray-900", "text-white");
-            trigger.classList.remove("hover:bg-gray-50");
+            trigger.classList.remove("hover:bg-gray-50", 'bg-transparent');
         }
     }
 </script>
