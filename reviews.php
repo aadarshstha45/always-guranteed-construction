@@ -39,16 +39,14 @@ $testimonials = [
 
 
 ?>
-
 <div class="flex flex-col">
-
     <?php
     $sectionTitle = "Reviews";
     include 'includes/banner.php';
     ?>
-    <div
-        id="reviews"
-        class="opacity-0 transform -translate-y-10 transition-all duration-700 py-10 min-h-[60vh] px-4 w-full max-w-[95dvw]  md:max-w-[90dvw] lg:max-w-[85dvw] 2xl:max-w-[75dvw] mx-auto">
+
+    <div id="reviews"
+        class="opacity-0 transform -translate-y-10 transition-all duration-700 py-10 min-h-[60vh] px-4 w-full max-w-[95dvw] md:max-w-[90dvw] lg:max-w-[85dvw] 2xl:max-w-[75dvw] mx-auto">
         <div class="grid grid-cols-1 min-[900px]:grid-cols-3 gap-5">
             <!-- Column 1 -->
             <div class="flex flex-col col-span-2 min-[900px]:col-span-1">
@@ -56,7 +54,7 @@ $testimonials = [
                     <p class="text-[20px] font-medium uppercase">Write Your Review</p>
                 </div>
                 <form action="reviews-send.php" method='post' class="flex gap-4 flex-col p-5 bg-gray-100">
-                    <input name="name" type="text" placeholder="Name *" class="input-text " required />
+                    <input name="name" type="text" placeholder="Name *" class="input-text" required />
                     <input name="email" type="email" placeholder="Email *" class="input-text" required />
                     <input name="phone" type="text" placeholder="Phone" class="input-text" />
                     <input name="address" type="text" placeholder="Address" class="input-text" />
@@ -67,36 +65,51 @@ $testimonials = [
             </div>
             <!-- Column 1 -->
 
-
             <!-- Column 2 -->
-
             <div class="flex flex-col gap-4 col-span-2">
                 <div class="flex flex-col gap-4 px-5 py-4 items-center justify-center bg-primary-500 text-white">
                     <p class="text-[20px] font-medium uppercase">What Our Clients Say</p>
                 </div>
 
-
-                <?php foreach ($testimonials as $testimonial): ?>
-                    <div class="flex  border-b-2 p-2 items-start gap-4">
-
-                        <div class="flex flex-col">
-                            <p class="text-[16px ]"><?php echo $testimonial['testimonial']; ?></p>
-                            <div class="flex items-center my-4 gap-2">
-                                <div class="min-w-10 min-h-10 bg-primary-500 rounded-full flex items-center justify-center">
-                                    <p class="text-white text-[20px] font-bold"><?php echo $testimonial['name'][0]; ?></p>
-                                </div>
-                                <div class="flex flex-col gap-0">
-                                    <p class="text-[20px] font-medium mt-2"> <?php echo $testimonial['name']; ?></p>
-                                    <p class="text-[16px] font-light"><?php echo $testimonial['role']; ?></p>
-                                </div>
-
-                            </div>
+                <?php foreach ($testimonials as $index => $testimonial): ?>
+                    <div class="border rounded-lg">
+                        <button
+                            id="accordion-<?= $index; ?>"
+                            class="flex text-[16px] md:text-[18px] xl:text-[20px] font-medium  justify-between items-center w-full px-6 py-3 text-left bg-transparent hover:bg-gray-50 transition font-viga"
+                            onclick="toggleAccordion(<?= $index; ?>)">
+                            - <?= $testimonial['name']; ?>
+                            <span class="toggle-icon" id="icon-<?= $index; ?>">+</span>
+                        </button>
+                        <div id="testimonial-<?= $index; ?>" class="max-h-0 overflow-hidden transition-all duration-300 px-6 text-gray-700 font-sofia">
+                            <p class="py-3"><?= $testimonial['testimonial']; ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
 
-                <!-- Column 2 -->
             </div>
+            <!-- Column 2 -->
         </div>
     </div>
 </div>
+
+<script>
+    function toggleAccordion(index) {
+        const trigger = document.getElementById(`accordion-${index}`);
+        const content = document.getElementById(`testimonial-${index}`);
+        const icon = document.getElementById(`icon-${index}`);
+
+        console.log(trigger)
+
+        if (content.style.maxHeight) {
+            trigger.classList.remove("bg-gray-900", "text-white");
+            trigger.classList.add("hover:bg-gray-50");
+            content.style.maxHeight = null;
+            icon.innerText = "+";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.innerText = "-";
+            trigger.classList.add("bg-gray-900", "text-white");
+            trigger.classList.remove("hover:bg-gray-50");
+        }
+    }
+</script>
