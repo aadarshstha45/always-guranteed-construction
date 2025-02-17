@@ -27,7 +27,9 @@ $pathname = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
     <!-- Navbar -->
     <div class="w-full bg-white">
         <div class="flex items-center justify-between mx-auto max-w-[1800px] px-[10px] md:px-[20px] py-2">
-            <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="logo" class="w-[200px] h-[80px] sm:w-[250px] sm:h-[100px] md:w-[314px] md:h-[134px]" />
+            <a href="<?= BASE_URL ?>">
+                <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="logo" class="w-[200px] h-[80px] sm:w-[250px] sm:h-[100px] md:w-[314px] md:h-[134px]" />
+            </a>
 
             <!-- Button to Open Drawer -->
             <button onclick="openDrawer()" class="primary-btn flex min-[710px]:hidden">

@@ -45,18 +45,19 @@ $slides = [
   <div
     id="offer-slider"
     class="swiper offerSlider max-w-[1440px] w-full mx-auto opacity-0 scale-0 transform transition-all  duration-1000 ease-in-out">
-    <div class="swiper-wrapper">
+    <div
+      id="services"
+      class="swiper-wrapper">
       <?php for ($i = 0; $i < 3; $i++): ?>
         <?php foreach ($slides as $slide): ?>
           <div
-            onmouseenter="handleHover(this)"
-            onmouseleave="handleHoverOut(this)"
+
             class="swiper-slide  max-h-[282px] rounded-[5px] overflow-hidden relative">
             <img src="<?= $slide['image']; ?>" alt="<?= $slide['title']; ?>" class="rounded-[5px]" />
             <div class="absolute bottom-0 bg-gradient-to-t  from-black from-0% to-transparent to-100% w-full">
               <div class='flex gap-[16px] p-[30px]'>
                 <div
-                  id="offer-icon"
+                  id="service-icon"
                   class="bg-black hover:bg-gradient-to-b from-[#005CDC] to-[#0D3875] outline  outline-white/70 outline-[7px] flex items-center justify-center aspect-square w-[57px] h-[57px] rounded-full p-[8px] ">
                   <img src="<?= $slide['icon']; ?>" alt="<?php echo $slide['title']; ?>" class='max-w-[30px] max-h-[30px] object-contain mx-auto aspect-square' />
                 </div>
@@ -114,13 +115,18 @@ $slides = [
     swiper.slidePrev();
   };
 
-  handleHover = (e) => {
-    const icon = e.querySelector("#offer-icon");
-    icon.classList.add("bg-gradient-to-b");
-  };
+  const services = document.querySelectorAll('#services .swiper-slide');
+  services.forEach(service => {
+    service.addEventListener('mouseenter', () => {
+      const serviceIcon = service.querySelector('#service-icon');
+      serviceIcon.classList.add('bg-gradient-to-b');
+      serviceIcon.classList.remove('bg-black');
+    });
 
-  handleHoverOut = (e) => {
-    const icon = e.querySelector("#offer-icon");
-    icon.classList.remove("bg-gradient-to-b");
-  };
+    service.addEventListener('mouseleave', () => {
+      const serviceIcon = service.querySelector('#service-icon');
+      serviceIcon.classList.remove('bg-gradient-to-b');
+      serviceIcon.classList.add('bg-black');
+    });
+  });
 </script>
