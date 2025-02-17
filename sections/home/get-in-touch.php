@@ -1,4 +1,5 @@
 <section
+  id="get-in-touch"
   class="w-full bg-[url('<?= base_URL ?>/assets/images/contactBg.png')] bg-cover bg-center bg-no-repeat relative min-h-[200px] py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
   <div class="absolute bg-black/70 top-0 left-0 w-full h-full"></div>
   <div
