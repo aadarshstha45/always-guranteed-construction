@@ -1,13 +1,14 @@
 <section
   id="get-in-touch"
-  class="w-full bg-[url('<?= base_URL ?>/assets/images/contactBg.png')] bg-cover bg-center bg-no-repeat relative min-h-[200px] py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
+  class="w-full  relative min-h-[200px] py-[115px] px-[10px] min-[450px]:px-[50px] min-[1300px]:px-[135px]">
+  <img src="assets/images/contact-bg.png" alt="Home Banner" class="w-full h-full object-cover object-center absolute top-0 left-0 -z-10">
   <div class="absolute bg-black/70 top-0 left-0 w-full h-full"></div>
   <div
     class="grid grid-cols-1 min-[1060px]:grid-cols-2 items-center gap-12 min-[1060px]:gap-4 relative">
     <div class="flex flex-col gap-4 max-w-[487px] min-[1060px]:mx-auto">
       <p class="text-caption text-primary-500">Get in Touch</p>
       <p class="text-heading text-white">
-        We’d love to <span class="text-primary-500">hear</span> from you!
+        We'd love to <span class="text-primary-500">hear</span> from you!
       </p>
       <p
         class="text-white text-justify text-[16px] md:text-[18px] leading-[35px]">

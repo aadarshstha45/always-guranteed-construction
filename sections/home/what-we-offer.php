@@ -15,6 +15,21 @@ $slides = [
     'title' => "Custom Home",
     'image' => "assets/images/service-3.png",
     'icon' => "assets/images/house.png",
+  ],
+  [
+    'title' => "Dry Wall Service",
+    'image' => "assets/images/service-4.png",
+    'icon' => "assets/icons/drywall.svg",
+  ],
+  [
+    'title' => "Windows/Doors/Tiles",
+    'image' => "assets/images/service-5.png",
+    'icon' => "assets/icons/window.svg",
+  ],
+  [
+    'title' => "Painting",
+    'image' => "assets/images/service-6.png",
+    'icon' => "assets/icons/painting.svg",
   ]
 ];
 
@@ -63,7 +78,7 @@ $slides = [
                 </div>
                 <div class="flex flex-col items-start gap-1">
                   <p class="text-white font-viga leading-[30px] text-[20px] md:text-[24px]"><?= $slide['title'] ?></p>
-                  <a href="#" class="text-primary-500">Read More</a>
+                  <a href="services" class="text-primary-500">Read More</a>
                 </div>
               </div>
             </div>
