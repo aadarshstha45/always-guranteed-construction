@@ -9,6 +9,7 @@ define("BASE_URL", $protocol . '://' . $host . $basePath); // Construct dynamic 
 <?php define('email', 'brenda3712000@yahoo.com '); ?>
 <?php define('phone', '(618) 567-2106 '); ?>
 <?php define('address', '4448 Austell Powder, GA 30127-2917'); ?>
+<?php define('MAIL_URL', "http://send.mail.codetara.com/api/send-email"); ?>
 
 <?php
 // Define the base URL depending on the environment (local or production)

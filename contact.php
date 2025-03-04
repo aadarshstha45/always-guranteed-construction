@@ -36,16 +36,15 @@ $contacts = [
         id="contact-us"
         class="opacity-0 transform -translate-y-10 transition-all duration-700 py-10 min-h-[60vh] px-4 w-full max-w-[95dvw]  sm:max-w-[90dvw] lg:max-w-[80dvw] mx-auto">
         <div
-            class="grid grid-cols-1 min-[1060px]:grid-cols-2 items-start gap-12 min-[1060px]:gap-4 relative">
+            class="grid grid-cols-1 min-[1060px]:grid-cols-2 items-center gap-12 min-[1060px]:gap-4 relative py-8">
 
             <!-- Grid 1 -->
-            <div class="flex flex-col gap-4 max-w-[487px] ">
-                <p class="text-caption text-primary-500 border-b-2 pb-2 border-b-primary-400 w-max">Get in Touch</p>
-                <p class="text-heading ">
+            <div class="flex flex-col gap-4  min-[1060px]:border-r-[4px] min-[1060px]:border-r-primary-500">
+                <p class="text-heading max-w-[487px] ">
                     We'd love to <span class="text-primary-500">hear</span> from you!
                 </p>
                 <p
-                    class="text-justify text-[16px] md:text-[18px] leading-[35px]">
+                    class="text-justify text-[16px] md:text-[18px] leading-[35px] max-w-[487px] ">
                     Please fill out the form, and we will get back to you as soon as
                     possible during regular business hours to confirm your preferred dates &
                     times. Or contact us through:
@@ -67,9 +66,11 @@ $contacts = [
             </div>
             <!-- Grid 1 -->
             <!-- Contact Form -->
-            <div class="bg-white flex flex-col gap-4 px-[20px] min-[400px]:px-[48px] w-full h-full border-l-[4px] border-l-primary-500">
-                <p class="text-caption text-primary-500 border-b-2 pb-2 border-b-primary-400 w-max">Contact Us</p>
-                <form class="grid grid-cols-1 min-[570px]:grid-cols-2 gap-6" id="contactForm" method="POST" action="contact-send.php">
+            <div class="bg-white justify-center
+            max-[1060px]:border-l-[4px] max-[1060px]:border-l-primary-500
+            shadow-md
+            flex flex-col gap-4 px-[20px] min-[400px]:px-[48px] pb-[50px] w-full h-full">
+                <form class="grid grid-cols-1 min-[570px]:grid-cols-2 gap-6" id="contactForm">
                     <input type="text" name="name" class="input-text col-span-2 min-[570px]:col-span-1" placeholder="Name: " required />
                     <input type="text" name="phone" class="input-text col-span-2 min-[570px]:col-span-1" placeholder="Phone: " required />
                     <input type="email" name="email" class="input-text col-span-2 min-[570px]:col-span-1" placeholder="Email: " required />
@@ -80,7 +81,10 @@ $contacts = [
                     </button>
 
                     <!-- Success/Error Message -->
-                    <div id="responseMessage" style="display: none;"></div>
+                    <div id="responseMessage"
+                        class="text-[16px] text-center text-white col-span-2 p-2 rounded-md"
+
+                        style="display: none;"></div>
                 </form>
             </div>
 
@@ -90,7 +94,6 @@ $contacts = [
 
         <!-- Google Map -->
         <div class="py-10 flex flex-col gap-4">
-            <p class="text-caption text-primary-500 border-b-2 pb-2 border-b-primary-400 w-max">Location</p>
             <div class=" w-full h-[400px] sm:h-[500px] lg:h-[600px] border-2 border-gray-500 rounded-md overflow-hidden">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.7207347561316!2d-84.6658606!3d33.8453119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5233903576971%3A0x3eccd970142acc8a!2s4448%20Austell%20Powder%20Springs%20Rd%20SW%2C%20Powder%20Springs%2C%20GA%2030127%2C%20USA!5e0!3m2!1sen!2snp!4v1739421535376!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -98,3 +101,46 @@ $contacts = [
         <!-- Google Map -->
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("#contactForm").submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = {
+                name: $("input[name='name']").val(),
+                email: $("input[name='email']").val(),
+                phone: $("input[name='phone']").val(),
+                address: $("input[name='address']").val(),
+                message: $("textarea[name='message']").val(),
+            };
+
+            const formattedData = {
+                to: "aadarsh.stha36@gmail.com", // Replace with actual receiver email
+                subject: `New message from ${formData.name}`,
+                message: {
+                    Name: formData.name,
+                    Email: formData.email,
+                    Phone: formData.phone,
+                    Address: formData.address,
+                    Message: formData.message,
+                },
+            };
+
+            $.ajax({
+                url: "http://send.mail.codetara.com/api/send-email",
+                type: "POST",
+                data: JSON.stringify(formattedData),
+                contentType: "application/json",
+                success: function(response) {
+                    $("#responseMessage").text("Message sent successfully!").css("background", "green").fadeIn();
+                    $("#contactForm")[0].reset();
+                },
+                error: function() {
+                    $("#responseMessage").text("Failed to send message. Try again.").css("background", "red").fadeIn();
+                },
+
+            });
+        });
+    });
+</script>
